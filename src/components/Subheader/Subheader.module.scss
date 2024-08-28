@@ -35,6 +35,11 @@
       &:active {
         color: $basic-color-1; // Цвет при нажатии
       }
+
+      &.active {
+        font-weight: $font-weight-bold; // Выделяем активную ссылку
+        color: $basic-color-1; // Цвет активной ссылки
+      }
     }
   }
 }

@@ -5,10 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import "./scss/app.scss";
 
 import LayoutMain from "./layouts/LayoutMain";
-import Layoutapp from "./layouts/LayoutApp";
+import LayoutApp from "./layouts/LayoutApp";
 
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import Contacts from "./pages/Contacts";
+import Сonfigurator from "./pages/Сonfigurator";
 
 function App() {
   // const dispatch = useDispatch();
@@ -21,9 +24,13 @@ function App() {
     <Routes>
       <Route path="/" element={<LayoutMain />}>
         <Route path="" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contacts />} />
       </Route>
 
-      <Route path="/app" element={<Layoutapp />}></Route>
+      <Route path="app" element={<LayoutApp />}>
+        <Route path="configurator" element={<Сonfigurator />} />
+      </Route>
 
       <Route path="*" element={<NotFound />} />
     </Routes>

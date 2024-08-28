@@ -1,0 +1,32 @@
+// BlockAbout.module.scss
+@import "../../scss/variables";
+
+.blockAbout {
+  font-family: $font-family-primary;
+  padding: 2rem;
+  background-color: $additional-color-1;
+  border-radius: $border-radius-large;
+  box-shadow: $box-shadow-basic;
+
+  .title {
+    font-size: $font-size-base * 1.5; // Consistent size for all titles
+    color: $additional-color-5; // Neutral color for titles
+    margin-bottom: 1rem;
+    font-weight: $font-weight-bold; // Bold for emphasis
+  }
+
+  p {
+    font-size: $font-size-base;
+    color: $additional-color-4;
+  }
+
+  a {
+    color: inherit; // Наследуем цвет родителя
+    text-decoration: underline; // Подчеркивание
+    text-decoration-color: $additional-color-3; // Цвет подчеркивания
+
+    &:hover {
+      color: $basic-color-1; // Цвет при наведении
+    }
+  }
+}

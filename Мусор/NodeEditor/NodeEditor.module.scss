@@ -1,0 +1,111 @@
+@import "../../scss/variables";
+
+.nodeEditor {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+
+  .toolbar {
+    background-color: $additional-color-2;
+    padding: 15px;
+
+    .toolbarButton {
+      background-color: $basic-color-1;
+      color: $additional-color-1;
+      border: none;
+      border-radius: $border-radius-small;
+      padding: $button-padding;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $basic-color-2;
+      }
+    }
+  }
+
+  .workspace {
+    flex-grow: 1;
+    background-color: $additional-color-1;
+    overflow-y: auto;
+    position: relative;
+
+    .node {
+      background-color: $additional-color-2;
+      border-radius: $border-radius-small;
+      box-shadow: $box-shadow-basic;
+      margin-bottom: 20px;
+      width: 200px;
+
+      .nodeHeader {
+        background-color: $basic-color-1;
+        color: $additional-color-1;
+        border-top-left-radius: $border-radius-small;
+        border-top-right-radius: $border-radius-small;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          margin: 0;
+          font-size: $font-size-base;
+          font-weight: $font-weight-medium;
+        }
+
+        .nodeActions {
+          .actionButton {
+            background-color: transparent;
+            color: $additional-color-1;
+            border: none;
+            margin-left: 5px;
+            cursor: pointer;
+            transition: color 0.3s;
+
+            &:hover {
+              color: $basic-color-2;
+            }
+          }
+        }
+      }
+
+      .nodeContent {
+        padding: 20px;
+        margin-bottom: 10px;
+
+        h4 {
+          margin: 0 0 10px 0;
+        }
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+
+          li {
+            margin: 5px 0;
+          }
+        }
+
+        input {
+          margin-right: 5px;
+          padding: 5px;
+          width: calc(50% - 10px);
+        }
+
+        button {
+          padding: 5px 10px;
+          background-color: $basic-color-1;
+          color: $additional-color-1;
+          border: none;
+          border-radius: $border-radius-small;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $basic-color-2;
+          }
+        }
+      }
+    }
+  }
+}

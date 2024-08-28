@@ -1,0 +1,45 @@
+// BlockContacts.module.scss
+@import "../../scss/variables";
+
+.blockContacts {
+  font-family: $font-family-primary;
+  padding: 2rem;
+  background-color: $additional-color-1;
+  border-radius: $border-radius-large;
+  box-shadow: $box-shadow-basic;
+  width: 100%; // Ширина на всю ширину родителя
+
+  .title {
+    font-size: $font-size-base * 1.75; // Заголовок блока
+    color: $additional-color-5; // Изменен цвет заголовка
+    margin-bottom: 1.5rem;
+    font-weight: $font-weight-bold;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+
+    .subtitle {
+      font-size: $font-size-base * 1.25; // Подзаголовок
+      color: $additional-color-5;
+      margin-bottom: 0.5rem;
+      font-weight: $font-weight-medium;
+    }
+
+    p {
+      font-size: $font-size-base;
+      color: $additional-color-4;
+      margin: 0.5rem 0;
+    }
+  }
+
+  .link {
+    color: $basic-color-2; // Цвет ссылок
+    text-decoration: underline; // Подчеркивание ссылок
+    margin-left: 0.5rem;
+
+    &:hover {
+      color: $basic-color-1; // Цвет при наведении
+    }
+  }
+}

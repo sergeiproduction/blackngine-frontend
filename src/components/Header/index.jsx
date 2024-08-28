@@ -6,6 +6,14 @@ import { SvgLogoWhite } from "../../svg/SvgLogo";
 const Header = () => {
   const location = useLocation(); // Получаем информацию о текущем пути
 
+  // Функция для проверки активности ссылки "Приложение"
+  const isAppLinkActive = () => {
+    return (
+      location.pathname === "/app" ||
+      location.pathname.startsWith("/app/")
+    );
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -16,7 +24,12 @@ const Header = () => {
         </div>
         <nav className={styles.navBlock}>
           <Link to="/" className={location.pathname === '/' ? styles.active : ''}>Главная</Link>
-          <Link to="/app" className={location.pathname === '/app' ? styles.active : ''}>Приложение</Link>
+          <Link
+            to="/app"
+            className={isAppLinkActive() ? styles.active : ''}
+          >
+            Приложение
+          </Link>
           <Link to="/about" className={location.pathname === '/about' ? styles.active : ''}>О нас</Link>
         </nav>
         <div className={styles.loginBlock}>
@@ -29,4 +42,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header

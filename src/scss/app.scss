@@ -50,9 +50,15 @@ a {
 }
 
 .app {
-  // width: $content-width;
+  width: 100%;
   margin: 1rem auto; // Отступ сверху 1 rem и центрирование по горизонтали
   display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 // .containerColumns {
