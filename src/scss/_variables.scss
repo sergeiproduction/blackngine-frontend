@@ -1,0 +1,35 @@
+// Шрифты
+$font-family-primary: "Open Sans", sans-serif;
+
+// Размеры шрифтов
+$font-size-base: 14px;
+
+// Начертания шрифтов
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Базовые цвета
+$basic-color-1: #4a67ff;
+$basic-color-2: #64b5ff;
+
+// Дополнительные цвета
+$additional-color-1: #ffffff;
+$additional-color-2: #e6e6e6;
+$additional-color-3: #999999;
+$additional-color-4: #444444;
+$additional-color-5: #2c2c2c;
+
+// Градиенты
+$gradient-1: linear-gradient(to right, $basic-color-1, $basic-color-2);
+
+// Радиусы границ
+$border-radius-small: 15px;
+$border-radius-large: 30px;
+
+// Размер тени
+$box-shadow-basic: 0 0 5px rgba(0, 0, 0, 0.3);
+
+// Прочее
+$error-color: #ff0000;
+// $checked-color: #4891ff;

@@ -1,0 +1,79 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.header {
+  height: 4rem;
+  background-color: $additional-color-1;
+  box-shadow: $box-shadow-basic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1600px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logoBlock {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center; // Центрируем содержимое по высоте
+  height: 100%;
+
+  svg {
+    height: 2rem;
+    width: auto;
+  }
+}
+
+.navBlock {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0 2rem;
+
+  a {
+    margin: 0 1rem;
+    color: $additional-color-4;
+    text-decoration: none;
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+
+    &:hover {
+      color: $basic-color-1;
+    }
+  }
+}
+
+.loginBlock {
+  a {
+    display: block;
+  }
+
+  .loginButton {
+    padding: 0.5rem 1rem;
+    background-color: $basic-color-1;
+    color: $additional-color-1;
+    border: none;
+    border-radius: $border-radius-small;
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $basic-color-2;
+    }
+  }
+}
