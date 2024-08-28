@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './BlockNotFound.module.scss';
 
-export const BlockNotFound = () => {
+const BlockNotFound = () => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
@@ -21,3 +21,5 @@ export const BlockNotFound = () => {
     </div>
   );
 };
+
+export default BlockNotFound;

@@ -1,0 +1,243 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.blockHome {
+  background-color: $additional-color-1;
+  border-radius: $border-radius-small;
+  box-shadow: $box-shadow-basic;
+  padding: 4rem;
+  margin-bottom: 1rem; // Отступ снизу
+
+  .content {
+    max-width: $content-width;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-family: $font-family-primary;
+    font-size: 3rem;
+    font-weight: $font-weight-bold;
+    color: $additional-color-4;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .description {
+    font-family: $font-family-primary;
+    font-size: 1.2rem;
+    font-weight: $font-weight-regular;
+    color: $additional-color-3;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .feature {
+    background-color: $additional-color-1;
+    border-radius: $border-radius-small;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid $basic-color-1; // Контур вместо фона
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .featureIcon {
+    color: $basic-color-1;
+    margin-bottom: 1.5rem;
+
+    svg {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  .featureTitle {
+    font-family: $font-family-primary;
+    font-size: 1.8rem;
+    font-weight: $font-weight-bold;
+    color: $additional-color-4;
+    margin-bottom: 1rem;
+  }
+
+  .featureDescription {
+    font-family: $font-family-primary;
+    font-size: 1.1rem;
+    font-weight: $font-weight-regular;
+    color: $additional-color-3;
+    line-height: 1.6;
+  }
+
+  .benefits {
+    background-color: $basic-color-1;
+    border-radius: $border-radius-small;
+    padding: 3rem;
+    color: $additional-color-1;
+    margin-bottom: 4rem;
+  }
+
+  .benefitsTitle {
+    font-family: $font-family-primary;
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .benefitsList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .benefitItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .benefitIcon {
+      color: $additional-color-1;
+      margin-bottom: 1rem;
+
+      svg {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+
+    .benefitText {
+      h4 {
+        font-family: $font-family-primary;
+        font-size: 1.2rem;
+        font-weight: $font-weight-bold;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-family: $font-family-primary;
+        font-size: 1rem;
+        font-weight: $font-weight-regular;
+      }
+    }
+  }
+
+  .additionalInfo {
+    margin-bottom: 4rem;
+
+    .additionalTitle {
+      font-family: $font-family-primary;
+      font-size: 2.5rem;
+      font-weight: $font-weight-bold;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: $additional-color-4; // Новый цвет заголовка
+    }
+
+    .additionalDescription {
+      font-family: $font-family-primary;
+      font-size: 1.2rem;
+      font-weight: $font-weight-regular;
+      color: $additional-color-3;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .additionalSubTitle {
+      font-family: $font-family-primary;
+      font-size: 2rem;
+      font-weight: $font-weight-bold;
+      color: $additional-color-4;
+      margin-bottom: 1.5rem;
+      text-align: left; // Выровнено по левой стороне
+    }
+
+    .roadmap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; // Выровнено по левой стороне
+      margin-top: 2rem;
+
+      .roadmapStep {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+
+        .stepNumber {
+          width: 40px;
+          height: 40px;
+          background-color: transparent;
+          color: $basic-color-1;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5rem;
+          font-weight: $font-weight-bold;
+          margin-right: 1.5rem;
+          border: 2px solid $basic-color-1; // Контур вместо фона
+        }
+
+        .stepContent {
+          text-align: left;
+
+          .stepTitle {
+            font-family: $font-family-primary;
+            font-size: 1.5rem;
+            font-weight: $font-weight-bold;
+            color: $additional-color-4;
+            margin-bottom: 0.5rem;
+          }
+
+          .stepDescription {
+            font-family: $font-family-primary;
+            font-size: 1rem;
+            font-weight: $font-weight-regular;
+            color: $additional-color-3;
+          }
+        }
+      }
+    }
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .ctaTitle {
+    font-family: $font-family-primary;
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    color: $additional-color-4;
+    margin-bottom: 3rem;
+  }
+
+  .ctaButton {
+    background-color: $basic-color-1;
+    color: $additional-color-1;
+    border: none;
+    border-radius: $border-radius-small;
+    padding: $button-padding;
+    font-family: $font-family-primary;
+    font-size: 1.1rem;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($basic-color-1, 10%);
+    }
+  }
+}

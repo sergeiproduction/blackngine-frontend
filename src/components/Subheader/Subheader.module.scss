@@ -1,0 +1,40 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; // Центрирование по высоте
+  height: 4rem;
+  background-color: $additional-color-1; // Белый фон
+  padding: 0 1rem; // Отступы по бокам
+
+  .processName {
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold; // Можно изменить на другой вес, если нужно
+    color: $additional-color-5; // Цвет текста (можно изменить)
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem; // Отступ между ссылками
+
+    .link {
+      font-family: $font-family-primary;
+      font-size: $font-size-base;
+      font-weight: $font-weight-medium; // Можно изменить на другой вес, если нужно
+      color: $additional-color-5; // Цвет текста ссылок
+      text-decoration: none; // Убираем подчеркивание
+      transition: none; // Убираем анимацию
+
+      &:hover {
+        color: $basic-color-1; // Цвет при наведении
+      }
+
+      &:active {
+        color: $basic-color-1; // Цвет при нажатии
+      }
+    }
+  }
+}

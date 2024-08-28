@@ -1,21 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
-import SvgLogo from "../../svg/SvgLogo";
+import { SvgLogoWhite } from "../../svg/SvgLogo";
 
 const Header = () => {
+  const location = useLocation(); // Получаем информацию о текущем пути
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logoBlock}>
           <Link to="/" className={styles.logoLink}>
-            <SvgLogo />
+            <SvgLogoWhite />
           </Link>
         </div>
         <nav className={styles.navBlock}>
-          <Link to="/link1">Ссылка 1</Link>
-          <Link to="/link2">Ссылка 2</Link>
-          <Link to="/link3">Ссылка 3</Link>
+          <Link to="/" className={location.pathname === '/' ? styles.active : ''}>Главная</Link>
+          <Link to="/app" className={location.pathname === '/app' ? styles.active : ''}>Приложение</Link>
+          <Link to="/about" className={location.pathname === '/about' ? styles.active : ''}>О нас</Link>
         </nav>
         <div className={styles.loginBlock}>
           <Link to="/login">

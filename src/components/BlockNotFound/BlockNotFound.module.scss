@@ -31,19 +31,17 @@
 
 .button {
   display: inline-block;
-  padding: 0.8rem 1.6rem;
+  padding: $button-padding;
   font-size: 1rem;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-medium;
   color: $additional-color-1;
   border: none;
   border-radius: $border-radius-small;
   cursor: pointer;
-  background: $gradient-1;
-  background-size: 200% 200%; // Увеличиваем размер градиента
-  background-position: 0 0; // Начальная позиция градиента
-  transition: background-position 0.3s ease; // Плавный переход для background-position
+  background: $basic-color-1;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background-position: 100% 0; // Изменяем позицию градиента при наведении
+    background-color: darken($basic-color-1, 10%);
   }
 }

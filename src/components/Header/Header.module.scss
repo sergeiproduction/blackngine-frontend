@@ -3,77 +3,91 @@
 
 .header {
   height: 4rem;
-  background-color: $additional-color-1;
+  background-color: $additional-color-5; // Цвет фона шапки
   box-shadow: $box-shadow-basic;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 1600px;
-}
+  justify-content: center; // Центрируем контейнер по горизонтали
+  align-items: center; // Центрируем контейнер по вертикали
+  min-width: $content-width;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-.container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-}
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // Центрируем элементы контейнера по высоте
+    padding: 0 2rem;
 
-.logoBlock {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
+    .logoBlock {
+      height: 100%;
+      display: flex;
+      align-items: center; // Центрируем логотип по высоте
 
-.logoLink {
-  display: flex;
-  align-items: center; // Центрируем содержимое по высоте
-  height: 100%;
+      .logoLink {
+        display: flex;
+        align-items: center; // Центрируем содержимое ссылки по высоте
+        height: 100%;
 
-  svg {
-    height: 2rem;
-    width: auto;
-  }
-}
+        svg {
+          height: 2rem; // Устанавливаем высоту логотипа
+          width: auto; // Автоматическая ширина для сохранения пропорций
+        }
+      }
+    }
 
-.navBlock {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-  margin: 0 2rem;
+    .navBlock {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      margin: 0 2rem;
 
-  a {
-    margin: 0 1rem;
-    color: $additional-color-4;
-    text-decoration: none;
-    font-family: $font-family-primary;
-    font-size: $font-size-base;
-    font-weight: $font-weight-medium;
+      a {
+        margin: 0 1rem;
+        color: $additional-color-1; // Цвет текста ссылок
+        text-decoration: none;
+        font-family: $font-family-primary;
+        font-size: $font-size-base;
+        font-weight: $font-weight-medium;
 
-    &:hover {
-      color: $basic-color-1;
+        &:hover {
+          color: $basic-color-2; // Изменен цвет при наведении на $basic-color-2
+        }
+
+        &.active {
+          // color: $basic-color-2; // Цвет для активной ссылки
+          font-weight: $font-weight-bold; // Увеличиваем жирность для выделения
+          border-bottom: 2px solid $basic-color-2; // Подчеркивание для активной ссылки
+        }
+      }
+    }
+
+    .loginBlock {
+      a {
+        display: block;
+      }
+
+      .loginButton {
+        padding: 0.5rem 1rem;
+        background-color: $basic-color-1; // Цвет кнопки
+        color: $additional-color-1; // Цвет текста кнопки
+        border: none;
+        border-radius: $border-radius-small;
+        font-family: $font-family-primary;
+        font-size: $font-size-base;
+        font-weight: $font-weight-medium;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($basic-color-1, 10%);
+        }
+      }
     }
   }
 }
 
-.loginBlock {
-  a {
-    display: block;
-  }
-
-  .loginButton {
-    padding: 0.5rem 1rem;
-    background-color: $basic-color-1;
-    color: $additional-color-1;
-    border: none;
-    border-radius: $border-radius-small;
-    font-family: $font-family-primary;
-    font-size: $font-size-base;
-    font-weight: $font-weight-medium;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $basic-color-2;
-    }
-  }
+main {
+  margin-top: 4rem; // Отступ для контента под шапкой
 }

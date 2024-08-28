@@ -1,0 +1,85 @@
+@import "../../scss/variables";
+@import "../../scss/fonts";
+
+.footer {
+  background-color: $additional-color-5;
+  color: $additional-color-1;
+  padding: 3rem 0;
+
+  .container {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+
+  .linksBlock {
+    display: flex;
+    justify-content: space-between;
+
+    .linksColumn {
+      flex: 1; // Make each column take equal space
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .linksTitle {
+        font-family: $font-family-primary;
+        font-size: 1.2rem;
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+
+      .linksList {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+          margin-bottom: 0.5rem;
+
+          a {
+            color: $additional-color-1;
+            text-decoration: none;
+            font-family: $font-family-primary;
+            font-size: 1rem;
+            font-weight: $font-weight-regular;
+
+            &:hover {
+              color: $basic-color-2;
+            }
+          }
+        }
+      }
+    }
+
+    .socialList {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center; // Center social icons
+
+      li {
+        margin: 0 0.5rem;
+
+        a {
+          color: $additional-color-1;
+          font-size: 1.2rem;
+
+          &:hover {
+            color: $basic-color-2;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 2rem;
+    font-family: $font-family-primary;
+    font-size: 0.9rem;
+    font-weight: $font-weight-regular;
+  }
+}
