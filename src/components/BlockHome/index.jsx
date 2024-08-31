@@ -136,7 +136,7 @@ const BlockHome = () => {
         </div>
         <div className={styles.cta}>
           <h2 className={styles.ctaTitle}>Начните оптимизацию бизнеса уже сегодня!</h2>
-          <Link to="/app" className={styles.ctaButton}>Перейти в приложение</Link>
+          {/* <Link to="/app" className={styles.ctaButton}>Перейти в приложение</Link> */}
         </div>
       </div>
     </div>

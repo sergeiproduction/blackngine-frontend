@@ -17,9 +17,11 @@ const Footer = () => {
           <div className={styles.linksColumn}>
             <h4 className={styles.linksTitle}>Поддержка</h4>
             <ul className={styles.linksList}>
-              <li><Link to="/faq">FAQ</Link></li>
+              {/* <li><Link to="/faq">FAQ</Link></li> */}
               <li><Link to="/contact">Контакты</Link></li>
-              <li><Link to="/docs">Документация</Link></li>
+              <li>
+                <a href="https://blackngine-backend.onrender.com/docs" target="_blank" rel="noopener noreferrer">Документация</a>
+              </li>
             </ul>
           </div>
           <div className={styles.linksColumn}>
